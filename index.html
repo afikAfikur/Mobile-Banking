@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Payyo App</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<style>
     
-</body>
+.outfit-primery {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+}
+</style>
+  </head>
+  <body>
+    <section class="firstPage bg-blue-950 min-h-screen">
+      <div class=" phoneSize bg-[#F4F5F7] max-w-[500px] h-screen mx-auto flex flex-col items-center justify-center">
+        <div class="container flex flex-col gap-36 justify-content-center">
+
+        
+        <div class="images relative w-[300px] mx-auto ">
+          <img class="absolute" src="./assets/bg.png" alt="" /><img
+            class="absolute ml-28 mt-10"
+            src="./assets/Group.png"
+            alt=""
+          />
+        </div>
+       <div class="shadow-md outfit-primery enteringElements flex gap-5 py-10
+        flex-col mx-auto w-[300px]  items-left bg-white rounded-xl px-8 ">
+         <label class="label font-bold text-[#080808] text-lg">Phone Number</label>
+        <input type="text" placeholder="Enter Your Number" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
+        <label class="text-[#080808] font-bold label text-lg ">4 Digit Pin</label>
+        <input type="password" placeholder="Enter Your 4 Digit Pin" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
+        <button class="bg-[#0874F2] text-white px-[#140px] py-3 rounded-xl shadow-lg font-semibold text-xl">Login</button>
+       </div>
+       </div>
+      </div>
+    </section>
+  </body>
 </html>

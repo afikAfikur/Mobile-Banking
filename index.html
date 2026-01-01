@@ -37,16 +37,30 @@
             alt=""
           />
         </div>
-       <form class="shadow-md outfit-primery enteringElements flex gap-5 py-10
+       <form id="forming" class="shadow-md outfit-primery enteringElements flex gap-5 py-10
         flex-col mx-auto w-[300px]  items-left bg-white rounded-xl px-8 ">
          <label class="label font-bold text-[#080808] text-lg">Phone Number</label>
-        <input required type="text" placeholder="Enter Your Number" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
+        <input id="number" required type="text" placeholder="Enter Your Number" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
         <label class="text-[#080808] font-bold label text-lg ">4 Digit Pin</label>
-        <input required type="password" placeholder="Enter Your 4 Digit Pin" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
-        <button class="bg-[#0874F2] text-white px-[#140px] py-3 rounded-xl shadow-lg font-semibold text-xl">Login</button>
-       </form>
+        <input id="pin" required type="password" placeholder="Enter Your 4 Digit Pin" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
+      </form>
+      <button id="btnLogin" class="bg-[#0874F2] text-white px-[#140px] py-3 rounded-xl shadow-lg font-semibold text-xl  mx-auto px-16 mt-6">Login</button>
        </div>
       </div>
     </section>
+    <script>
+      
+    document.getElementById('btnLogin').addEventListener('click',function(){
+      const num=document.getElementById('number').value;
+      const pass=parseInt(document.getElementById('pin').value);
+      if(num=='01309549619' && pass==1234){
+        window.location.href="./home.html"
+      }
+      else{
+        alert("Invalid password or pin");
+      }
+    })
+    </script>
+    
   </body>
 </html>

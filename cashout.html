@@ -28,7 +28,7 @@
                     <h1 class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E]">$45000</h1>
                     <h1 class="text-[14px] text-gradient-to-r from-[#080808] to-[#6E6E6E]">Available Balance</h1>
                 </div>
-                <button class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto">Log Out</button>
+                <button id="logout" class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto">Log Out</button>
             </div>
             <div class="secondOne px-[24px] flex flex-col gap-3">
                 <div class="heading font-bold text-[24px]">
@@ -102,7 +102,9 @@
         document.getElementById('payBill').addEventListener('click',function(){
             window.location.href="./paybill.html"
         })
-  
+  document.getElementById('logout').addEventListener('click',function(){
+            window.location.href="./index.html"
+        })
     </script>
   </body>
 </html>

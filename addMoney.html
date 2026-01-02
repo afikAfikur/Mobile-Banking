@@ -25,18 +25,20 @@
         <div class="head flex mb-[23px] bg-white px-[24px] py-[10px]">
           <img src="./assets/Group.png" class="w-12 h-12" alt="" />
           <div class="container">
-            <h1
-              class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E]"
+            <div 
+              class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E] flex"
             >
-              $45000
-            </h1>
+              <div> $</div>
+              <div id="upperbalance">45000</div>
+             
+            </div>
             <h1
               class="text-[14px] text-gradient-to-r from-[#080808] to-[#6E6E6E]"
             >
               Available Balance
             </h1>
           </div>
-          <button
+          <button id="logout"
             class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto"
           >
             Log Out
@@ -84,12 +86,12 @@
           <div>
             <h1 class="font-semibold text-[18px] pl-2">Add Money</h1>
           </div>
-          <div class="bg-[#FFFFFF] mt-[14px] flex flex-col gap-y-4 rounded-xl">
+          <form id="form" class="bg-[#FFFFFF] mt-[14px] flex flex-col gap-y-4 rounded-xl">
             <label class="font-semibold text-[16px] text-gray-800 pl-2 pt-2">
               Select a Bank
             </label>
 
-            <select
+            <select required
               class="w-full py-2 border bg-[#F4F5F7] rounded-xl shadow pl-[20px] focus:outline-none"
             >
               <option class="text-gray-300" value="" disabled selected>Select bank</option>
@@ -105,7 +107,7 @@
               for=""
               >Bank Account Number</label
             >
-            <input
+            <input required id="accountnum"
               class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
               type="text"
               placeholder="Enter 11 digit account number"
@@ -115,7 +117,7 @@
               for=""
               >Amount to Add</label
             >
-            <input
+            <input required id="ammount"
               class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
               type="text"
               placeholder="Add Amount to withdraw"
@@ -125,17 +127,17 @@
               for=""
               >Pin Number</label
             >
-            <input
+            <input required id="pinnum"
               class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
               type="text"
               placeholder="Enter 4 digit pin number"
             />
-            <button
+            <button type="submit" id="adMoney"
               class="bg-[#0874F2] text-white font-bold px-[20px] py-[14px] rounded-xl shadow mx-4 mb-4"
             >
               Add Money
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -158,7 +160,33 @@
         document.getElementById('payBill').addEventListener('click',function(){
             window.location.href="./paybill.html"
         })
-  
+  document.getElementById('logout').addEventListener('click',function(){
+            window.location.href="./index.html"
+        })
+       
+        document.getElementById('form').addEventListener('submit',function(event){
+            event.preventDefault();
+ const acnum=document.getElementById('accountnum').value;
+        const amountadd=document.getElementById('ammount').value;
+        let numberAmount=Number(amountadd);
+        const pinNumber=document.getElementById('pinnum').value;
+        let mainBal=document.getElementById('upperbalance').innerText;
+        let balance=Number(mainBal);
+            if(acnum.length==11){
+                if(pinNumber==='1234'){
+                    balance=balance+numberAmount;
+                    balstring=String(balance);
+                    document.getElementById('upperbalance').innerText=balstring;
+                }
+                else{
+                    alert("Invalid Pin");
+                }
+            }
+            else{
+                alert("Invalid Information");
+            }
+        })       
+
     </script>
   </body>
 </html>

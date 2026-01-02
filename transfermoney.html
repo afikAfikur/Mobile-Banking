@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .outfit-primary {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="outfit-primary">
+    <section class="whole bg-blue-950 min-h-screen">
+      <div class="everything bg-[#F4F5F7] max-w-[500px] mx-auto pt-[24px]">
+        <div class="head flex mb-[23px] bg-white px-[24px] py-[10px]">
+          <img src="./assets/Group.png" class="w-12 h-12" alt="" />
+          <div class="container">
+            <h1
+              class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E]"
+            >
+              $45000
+            </h1>
+            <h1
+              class="text-[14px] text-gradient-to-r from-[#080808] to-[#6E6E6E]"
+            >
+              Available Balance
+            </h1>
+          </div>
+          <button
+            class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto"
+          >
+            Log Out
+          </button>
+        </div>
+        <div class="secondOne px-[24px] flex flex-col gap-3">
+          <div class="heading font-bold text-[24px]">
+            <h1>🔥 Welcome to Payooo!</h1>
+          </div>
+          <p class="text-gray-500 text-[16px]">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+        <!-- start here -->
+        <div
+          class="mt-[23px] thirdSec text-[14px] text-gray-500 grid grid-cols-3 px-[24px] gap-x-4 gap-y-4"
+        >
+          <div
+            id="addMoney"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/wallet1.png" alt="" />
+            <h1>Add Money</h1>
+          </div>
+          <div
+            id="cahsout"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/money1.png" alt="" />
+            <h1>Cashout</h1>
+          </div>
+          <div
+            id="transfer"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/bonus1.png" alt="" />
+            <h1>Transfer Money</h1>
+          </div>
+          <div
+            id="bonus"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/purse1.png" alt="" />
+            <h1>Get Bonus</h1>
+          </div>
+          <div
+            id="transaction"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/transaction1.png" alt="" />
+            <h1>Transactions</h1>
+          </div>
+          <div
+            id="payBill"
+            class="border border-1 flex flex-col items-center justify-content-center py-4 rounded-xl shadow-md hover:bg-sky-300"
+          >
+            <img src="./assets/send1.png" alt="" />
+            <h1>Pay Bill</h1>
+          </div>
+        </div>
+        <!-- fourth section starts here       -->
+        <div class="fourthsection px-[24px] mt-[23px]">
+          <div>
+            <h1 class="font-semibold text-[18px] pl-2">Transfer Money</h1>
+          </div>
+          <div class="bg-[#FFFFFF] mt-[14px] flex flex-col gap-y-4 rounded-xl">
+            <label
+              class="font-semibold text-[16px] text-gray-800 pl-2 pt-2"
+              for=""
+              >User Account Number</label
+            >
+            <input
+              class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
+              type="text"
+              placeholder="Enter 11 digit number"
+            />
+            <label
+              class="font-semibold text-[16px] text-gray-800 pl-2 pt-2"
+              for=""
+              >Amount</label
+            >
+            <input
+              class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
+              type="text"
+              placeholder="Enter amount to transfer"
+            />
+            <label
+              class="font-semibold text-[16px] text-gray-800 pl-2 pt-2"
+              for=""
+              >Pin Number</label
+            >
+            <input
+              class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow pl-[20px] flex align-self-center"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              class="bg-[#0874F2] text-white font-bold px-[20px] py-[14px] rounded-xl shadow mx-4 mb-4"
+            >
+              Send Money
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("addMoney")
+        .addEventListener("click", function () {
+          window.location.href = "./addMoney.html";
+        });
+      document.getElementById("cahsout").addEventListener("click", function () {
+        window.location.href = "./cashout.html";
+      });
+      document
+        .getElementById("transfer")
+        .addEventListener("click", function () {
+          window.location.href = "./transfermoney.html";
+        });
+      document.getElementById("bonus").addEventListener("click", function () {
+        window.location.href = "./bonus.html";
+      });
+      document
+        .getElementById("transaction")
+        .addEventListener("click", function () {
+          window.location.href = "./transactions.html";
+        });
+      document.getElementById("payBill").addEventListener("click", function () {
+        window.location.href = "./paybill.html";
+      });
+    </script>
+  </body>
+</html>

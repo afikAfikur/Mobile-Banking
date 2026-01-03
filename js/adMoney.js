@@ -28,9 +28,12 @@ document.getElementById('addMoney').addEventListener('click',function(){
         const pinNumber=document.getElementById('pinnum').value;
         let mainBal=document.getElementById('upperbalance').innerText;
         let balance=Number(mainBal);
+        let setbal=localStorage.getItem('upperbalance');
             if(acnum.length==11){
                 if(pinNumber==='1234'){
                     balance=balance+numberAmount;
+                    setbal=balance;
+                    localStorage.setItem('upperbalance',setbal);
                     balstring=String(balance);
                     document.getElementById('upperbalance').innerText=balstring;
                 }

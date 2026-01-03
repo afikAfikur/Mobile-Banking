@@ -22,14 +22,30 @@
   <body class="outfit-primary ">
      <section class="whole bg-blue-950 min-h-screen">
         <div class="everything bg-[#F4F5F7] max-w-[500px]  mx-auto pt-[24px]">
+            
             <div class="head flex mb-[23px] bg-white px-[24px] py-[10px]">
-                <img src="./assets/Group.png" class="w-12 h-12" alt="">
-                <div class="container">
-                    <h1 class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E]">$45000</h1>
-                    <h1 class="text-[14px] text-gradient-to-r from-[#080808] to-[#6E6E6E]">Available Balance</h1>
-                </div>
-                <button id="logout" class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto">Log Out</button>
+          <img src="./assets/Group.png" class="w-12 h-12" alt="" />
+          <div class="container">
+            <div 
+              class="font-extrabold text-xl text-gradient-to-r from-[#080808] to-[#6E6E6E] flex"
+            >
+              <div> $</div>
+              <div id="upperbalance">45000</div>
+             
             </div>
+            <h1
+              class="text-[14px] text-gradient-to-r from-[#080808] to-[#6E6E6E]"
+            >
+              Available Balance
+            </h1>
+          </div>
+          <button id="logout"
+            class="hover:bg-sky-300 w-24 justify-center border border-[0.5px] shadow-sm rounded-xl py-[10px] text-[#666768] border-solid flex items-center mx-auto"
+          >
+            Log Out
+          </button>
+        </div>
+
             <div class="secondOne px-[24px] flex flex-col gap-3">
                 <div class="heading font-bold text-[24px]">
                     <h1>🔥 Welcome to Payooo!</h1>
@@ -69,17 +85,21 @@
                  <div>
                     <h1 class="font-semibold text-[18px] pl-2">Cash Out</h1>
                  </div>
-                 <div class="bg-[#FFFFFF] mt-[14px] flex flex-col gap-y-4 rounded-xl">
+                 <form
+                 id="formcashout" class="bg-[#FFFFFF] mt-[14px] flex flex-col gap-y-4 rounded-xl">
                     <label class="font-semibold text-[16px] text-gray-800 pl-2 pt-2" for="">Agent Number</label>
-                    <input class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter 11 digit number">
+                    <input
+                    id="agenNumber"
+                    required class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter 11 digit number">
                     <label class="font-semibold text-[16px] text-gray-800 pl-2 pt-2" for="">Amount</label>
-                    <input class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter amount to withdraw">
+                    <input id="ammount" required class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter amount to withdraw">
                     <label class="font-semibold text-[16px] text-gray-800 pl-2 pt-2" for="">Pin Number</label>
-                    <input class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter 4 digit pin number">
+                    <input id="pin"
+                    required class="w-full py-2 border border-1 bg-[#F4F5F7] rounded-xl shadow  pl-[20px] flex align-self-center" type="text" placeholder="Enter 4 digit pin number">
                     
                 
                     <button class="bg-[#0874F2] text-white font-bold px-[20px] py-[14px] rounded-xl shadow mx-4 mb-4">Withdraw Money</button>
-                 </div>
+                 </form>
             </div>
         </div>
     </section>

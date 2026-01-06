@@ -11,47 +11,69 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Payyo App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-<style>
-    
-.outfit-primery {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  
-  font-style: normal;
-}
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .outfit-primery {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
     <section class="firstPage bg-blue-950 min-h-screen">
-      <div class=" phoneSize bg-[#F4F5F7] max-w-[500px] h-screen mx-auto flex flex-col items-center justify-center">
-        <div class="container flex flex-col  justify-content-center">
-
-        
-        <div class=" images relative w-[300px] h-[200px] mx-auto ">
-          <img class="absolute" src="./assets/bg.png" alt="" /><img
-            class="absolute ml-28 mt-10"
-            src="./assets/Group.png"
-            alt=""
-          />
+      <div
+        class="phoneSize bg-[#F4F5F7] max-w-[500px] h-screen mx-auto flex flex-col items-center justify-center"
+      >
+        <div class="container flex flex-col justify-content-center">
+          <div class="images relative w-[300px] h-[200px] mx-auto">
+            <img class="absolute" src="./assets/bg.png" alt="" /><img
+              class="absolute ml-28 mt-10"
+              src="./assets/Group.png"
+              alt=""
+            />
+          </div>
+          <form
+            id="forming"
+            class="shadow-md outfit-primery enteringElements flex gap-5 py-10 flex-col mx-auto w-[300px] items-left bg-white rounded-xl px-8"
+          >
+            <label class="label font-bold text-[#080808] text-lg"
+              >Phone Number</label
+            >
+            <input
+              id="number"
+              required
+              type="text"
+              placeholder="Enter Your Number"
+              class="py-2 rounded-5 bg-[#F4F5F7] text-center"
+            />
+            <label class="text-[#080808] font-bold label text-lg"
+              >4 Digit Pin</label
+            >
+            <input
+              id="pin"
+              required
+              type="password"
+              placeholder="Enter Your 4 Digit Pin"
+              class="py-2 rounded-5 bg-[#F4F5F7] text-center"
+            />
+          </form>
+          <button
+            id="btnLogin"
+            class="bg-[#0874F2] text-white px-[#140px] py-3 rounded-xl shadow-lg font-semibold text-xl mx-auto px-16 mt-6"
+          >
+            Login
+          </button>
         </div>
-       <form id="forming" class="shadow-md outfit-primery enteringElements flex gap-5 py-10
-        flex-col mx-auto w-[300px]  items-left bg-white rounded-xl px-8 ">
-         <label class="label font-bold text-[#080808] text-lg">Phone Number</label>
-        <input id="number" required type="text" placeholder="Enter Your Number" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
-        <label class="text-[#080808] font-bold label text-lg ">4 Digit Pin</label>
-        <input id="pin" required type="password" placeholder="Enter Your 4 Digit Pin" class="py-2 rounded-5 bg-[#F4F5F7] text-center">
-      </form>
-      <button id="btnLogin" class="bg-[#0874F2] text-white px-[#140px] py-3 rounded-xl shadow-lg font-semibold text-xl  mx-auto px-16 mt-6">Login</button>
-       </div>
       </div>
     </section>
-    <script>
-      
-   
-    </script>
+    <script></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
